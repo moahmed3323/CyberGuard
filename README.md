@@ -18,21 +18,26 @@ CyberGuard is an AI-powered cybersecurity detection system designed to identify 
 ## 📁 Project Structure
 
 CyberGuard/
-├── app.py # Flask web application entry point
-├── model/ # Trained deep learning models
-│ ├── sql_lstm_model.h5
-│ ├── xss_bilstm_model.h5
-│ └── phishing_model.h5
-├── utils/ # Helper functions and preprocessing scripts
-│ └── preprocessing.py
-├── templates/ # HTML templates for frontend rendering
-│ ├── index.html
-│ └── admin.html
-├── static/ # CSS and JavaScript assets
-│ ├── style.css
-│ └── script.js
-├── requirements.txt # List of Python dependencies
-└── README.md # Project overview and documentation
+├── app.py                  # Main Flask backend application
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+
+├── model/                  # Trained DL models
+│   ├── sql_lstm_model.h5
+│   ├── xss_bilstm_model.h5
+│   └── phishing_model.h5
+
+├── utils/                  # Preprocessing scripts
+│   └── preprocessing.py
+
+├── templates/              # HTML templates for Flask
+│   ├── index.html
+│   └── admin.html
+
+└── static/                 # Static assets (CSS, JS)
+    ├── style.css
+    └── script.js
+
 ---
 
 ## 🧠 Models Used
