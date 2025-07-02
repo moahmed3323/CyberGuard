@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartGuard News - Error</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            color: #2d3748;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #dbeafe !important;
+        }
+        .error-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        .error-header {
+            font-size: 1.5rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .error-icon {
+            width: 100px;
+            height: 100px;
+            background: #dc3545;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        .error-icon::before {
+            content: "×";
+            font-size: 3rem;
+            color: white;
+            font-weight: 700;
+        }
+        .error-title {
+            color: #1e3a8a;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .error-subtext {
+            color: #718096;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        .error-sections {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .error-section {
+            flex: 1;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 6px;
+        }
+        .error-section h3 {
+            color: #2d3748;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .error-section p {
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+        .btn-home {
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-home:hover {
+            background: linear-gradient(45deg, #1e40af, #2563eb);
+            color: white;
+        }
+        .footer {
+            background: linear-gradient(90deg, #4b5563, #1f2937);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer-text {
+            font-size: 0.9rem;
+            color: #a0aec0;
+        }
+        @media (max-width: 768px) {
+            .error-sections {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .error-container {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><i class="fas fa-shield-alt me-2"></i> SmartGuard News</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    {% if session.get('admin') %}
+                        <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="error-container">
+        <div class="error-header">Sorry, you have been blocked</div>
+        <div class="error-subtext">You are unable to access SmartGuard News</div>
+        <div class="error-icon"></div>
+        <h1 class="error-title">Security Alert</h1>
+        <div class="error-sections">
+            <div class="error-section">
+                <h3>Why have I been blocked?</h3>
+                <p>{{ error_message }}</p>
+                <p>This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block, including submitting a certain word or phrase, a SQL command or malformed data.</p>
+            </div>
+            <div class="error-section">
+                <h3>What can I do to resolve this?</h3>
+                <p>You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+            </div>
+        </div>
+        <a href="/" class="btn-home">Back to Home</a>
+        <div class="footer-text">Cloudflare Ray ID: {{ ray_id }} • Your IP: Click to reveal • Performance & security by Cloudflare</div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 SmartGuard News. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

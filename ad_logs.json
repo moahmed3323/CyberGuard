@@ -1,0 +1,125 @@
+[
+  {
+    "timestamp": "2025-06-15T11:47:52.542947",
+    "url": "http://scam-offer.com/iphone",
+    "text": "Win a Free iPhone!",
+    "is_phishing": true,
+    "probability": 0.625,
+    "ip_address": "127.0.0.1",
+    "click_count": 58
+  },
+  {
+    "timestamp": "2025-06-14T21:25:27.519273",
+    "url": "https://www.google.com",
+    "text": "Visit Google!",
+    "is_phishing": false,
+    "probability": 0.305,
+    "ip_address": "127.0.0.1",
+    "click_count": 25
+  },
+  {
+    "timestamp": "2025-06-15T11:47:40.407579",
+    "url": "http://fake-login-page.com/login.php",
+    "text": "Free Login Page!",
+    "is_phishing": true,
+    "probability": 0.63,
+    "ip_address": "127.0.0.1",
+    "click_count": 38
+  },
+  {
+    "timestamp": "2025-06-14T21:26:48.607125",
+    "url": "https://learn1.bue.edu.eg/login/index.php",
+    "text": "Learn at BUE",
+    "is_phishing": false,
+    "probability": 0.25,
+    "ip_address": "127.0.0.1",
+    "click_count": 10
+  },
+  {
+    "timestamp": "2025-05-10T13:11:44.206811",
+    "url": "https://www.coursera.org/learn/tensorflow-sequences-time-series-and-prediction/home/week/1",
+    "text": "coursera free",
+    "is_phishing": true,
+    "probability": 0.9,
+    "ip_address": "127.0.0.1",
+    "click_count": 11
+  },
+  {
+    "timestamp": "2025-05-10T13:18:20.491024",
+    "url": "https://www.coursera.org",
+    "text": "coursera free",
+    "is_phishing": true,
+    "probability": 0.525,
+    "ip_address": "127.0.0.1",
+    "click_count": 20
+  },
+  {
+    "timestamp": "2025-05-10T15:36:09.048926",
+    "url": "http://scam-offer.com/iphone",
+    "text": "Win a Free iPhone!",
+    "is_phishing": true
+  },
+  {
+    "timestamp": "2025-06-14T21:51:38.260093",
+    "url": "https://www.google.com",
+    "text": "Visit Google!",
+    "is_phishing": false,
+    "probability": 0.305,
+    "ip_address": "192.168.56.1",
+    "click_count": 3
+  },
+  {
+    "timestamp": "2025-05-29T21:49:03.349732",
+    "url": "https://www.saudia.com/ar-EG",
+    "text": "flight",
+    "is_phishing": true,
+    "probability": 0.53,
+    "ip_address": "127.0.0.1",
+    "click_count": 1
+  },
+  {
+    "timestamp": "2025-05-29T22:21:07.320552",
+    "url": "https://www.saudia.com/ar-EG",
+    "text": "flight",
+    "is_phishing": true,
+    "probability": 0.53,
+    "ip_address": "192.168.56.1",
+    "click_count": 1
+  },
+  {
+    "timestamp": "2025-06-14T21:52:32.267204",
+    "url": "https://www.saudia.com/",
+    "text": "flight",
+    "is_phishing": true,
+    "probability": 0.505,
+    "ip_address": "192.168.56.1",
+    "click_count": 2
+  },
+  {
+    "timestamp": "2025-06-14T21:52:01.670337",
+    "url": "http://fake-login-page.com/login.php",
+    "text": "Free ",
+    "is_phishing": true,
+    "probability": 0.63,
+    "ip_address": "192.168.56.1",
+    "click_count": 2
+  },
+  {
+    "timestamp": "2025-06-15T11:47:21.335299",
+    "url": "https://www.saudia.com/",
+    "text": "flight",
+    "is_phishing": true,
+    "probability": 0.505,
+    "ip_address": "127.0.0.1",
+    "click_count": 2
+  },
+  {
+    "timestamp": "2025-06-14T21:52:23.173931",
+    "url": "https://learn1.bue.edu.eg/login/index.php",
+    "text": "Learn at BUE",
+    "is_phishing": false,
+    "probability": 0.25,
+    "ip_address": "192.168.56.1",
+    "click_count": 1
+  }
+]
